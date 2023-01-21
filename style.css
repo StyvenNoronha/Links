@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-Mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  background: url(./assets/bg-Mobile.jpg) no-repeat top center/cover;
+}
+
+.container {
+  width: 360px;
+  height: 712px;
+  border: 1px solid red;
+  margin: auto;
+  
+}
+
+.profile img {
+  width: 112px;
+  display: flex;
+  display: block;
+  margin: auto;
+  
+}
+
+.profile h1{
+  font-family: 'Inter',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+}
