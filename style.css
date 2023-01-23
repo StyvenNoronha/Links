@@ -6,24 +6,22 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --cor: #fff;
-  --back:url(./assets/bg-Mobile.jpg);
+  --back: url(./assets/bg-Mobile.jpg);
   --border-cor: rgba(255, 255, 255, 0.5);
   --cor-botao: rgba(255, 255, 255, 0.1);
-  --hover-cor:rgba(255, 255, 255, 0.2);
+  --hover-cor: rgba(255, 255, 255, 0.2);
   --mode: url(./assets/dark-mode.svg);
-  
 }
 
-.light{
- --cor: #000;
- --back:url(./assets/bg-Mobile-luz.jpg);
- --border-cor: rgba(0, 0, 0, 0.5);
- --cor-botao: rgba(0, 0, 0, 0.1);
- --hover-cor:rgba(0, 0, 0, 0.2);
- --mode: url(./assets/light-mode.svg);
-
+.light {
+  --cor: #000;
+  --back: url(./assets/bg-Mobile-luz.jpg);
+  --border-cor: rgba(0, 0, 0, 0.5);
+  --cor-botao: rgba(0, 0, 0, 0.1);
+  --hover-cor: rgba(0, 0, 0, 0.2);
+  --mode: url(./assets/light-mode.svg);
 }
 
 body {
@@ -63,40 +61,38 @@ body * {
   line-height: 24px;
 }
 
-#switch{
-position: relative;
-width: 64px;
-margin: 4px auto;
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
 }
 
-
-
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: #ffffff var(--mode) no-repeat center;
   border: 0;
   border-radius: 50%;
 
-
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slideback 0.5s forwards;
 }
 
-.light #switch button{
-  right: 0;
-  left: initial ;
+.light #switch button {
+  animation: slide 0.5s forwards;
 }
 
-#switch span{
+#switch span {
   display: block;
   width: 65px;
   height: 24px;
   background: var(--cor-botao);
-  border:  1px solid var(--border-cor);
+  border: 1px solid var(--border-cor);
   backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
@@ -114,17 +110,17 @@ ul li a {
   justify-content: center;
   align-items: center;
   padding: 16px 24px;
-  background:  var(--cor-botao);
+  background: var(--cor-botao);
   border: 1px solid var(--border-cor);
   backdrop-filter: blur(4px);
   border-radius: 8px;
   text-decoration: none;
-  font-weight:  500;
+  font-weight: 500;
   transition: background 0.2s;
 }
 
 ul li a:hover {
-  background: var(--cor-botao);;
+  background: var(--cor-botao);
   border: 1px solid var(--cor);
 }
 
@@ -149,7 +145,25 @@ ul li a:hover {
   background: var(--hover-cor);
 }
 
-footer{
+footer {
   padding: 24px;
   text-align: center;
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slideback {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
